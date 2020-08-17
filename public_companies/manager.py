@@ -18,6 +18,7 @@ JSON_FILE = 'state.json'
 
 def run(tase_api, selenium):
 
+    # Get a list of Tel-Aviv Stock Exchange companies via TASE API
     tase_companies_dict = tase_api.companies_list()
 
     skip = False
@@ -44,6 +45,7 @@ def run(tase_api, selenium):
         except Continue:
             continue
 
+        # get report for each company
         link = selenium.get_company_reports(company_id, FROM_YEAR, TO_YEAR)
         if link is None:
             print("Report not found for", company)

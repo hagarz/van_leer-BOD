@@ -7,7 +7,7 @@ import json
 
 
 class TASE(object):
-    """Tel-Aviv Stock Exchamge API requests"""
+    """Tel-Aviv Stock Exchange API requests"""
 
     base_url = 'https://openapigw.tase.co.il'
 
